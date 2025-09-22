@@ -74,12 +74,17 @@
     </dependencies>
 
     <build>
-        <finalName>quiz-builder-backend</finalName>
+        <!-- 👇 This ensures your WAR will always be called quiz.war -->
+        <finalName>quiz</finalName>
+
         <plugins>
             <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>quiz</finalName>
+                </configuration>
             </plugin>
 
             <!-- Maven Compiler Plugin (ensures Java 21 compliance) -->
@@ -100,6 +105,7 @@
                 <version>3.4.0</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warName>quiz</warName>
                 </configuration>
             </plugin>
         </plugins>
