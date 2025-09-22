@@ -1,19 +1,13 @@
 package com.example.demo;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootApplication
-public class QuizBuilderBackendApplication extends SpringBootServletInitializer {
+@SpringBootTest
+class QuizBuilderBackendApplicationTests {
 
-    public static void main(String[] args) {
-        SpringApplication.run(QuizBuilderBackendApplication.class, args);
-    }
+  @Test
+  void contextLoads() {
+  }
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(QuizBuilderBackendApplication.class);
-    }
 }
